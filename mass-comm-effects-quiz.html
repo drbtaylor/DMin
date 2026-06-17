@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classic Mass Media Effects Theories — Quiz</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f3;padding:1.5rem 1rem;color:#1a1a1a}
+.wrap{max-width:580px;margin:0 auto}
+.card{background:#fff;border-radius:14px;border:1px solid #e8e8e8;padding:1.375rem 1.25rem;margin-bottom:1rem}
+h1{font-size:19px;font-weight:700;margin-bottom:.25rem;line-height:1.35}
+.sub{font-size:13px;color:#888;margin-bottom:1rem}
+.instructions{font-size:14px;color:#555;line-height:1.6;padding:10px 14px;background:#eef2ff;border-radius:8px;margin-bottom:1.25rem;border-left:3px solid #6366f1}
+.name-label{font-size:13px;color:#444;font-weight:600;display:block;margin-bottom:6px}
+.name-input{width:100%;padding:10px 12px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;outline:none;transition:border .15s}
+.name-input:focus{border-color:#6366f1}
+.theory-tag{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;background:#eef2ff;color:#4338ca;margin-bottom:.5rem;font-weight:600;letter-spacing:.02em}
+.q-num{font-size:11px;font-weight:700;color:#aaa;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+.q-text{font-size:15px;font-weight:500;line-height:1.55;margin-bottom:1rem}
+.options{list-style:none;display:flex;flex-direction:column;gap:8px}
+.option label{display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:11px 13px;border-radius:9px;border:1.5px solid #e8e8e8;font-size:14px;line-height:1.45;transition:all .12s;background:#fff}
+.option label:hover{background:#f6f4ff;border-color:#c7d2fe}
+.option input[type=radio]{margin-top:2px;accent-color:#4f46e5;flex-shrink:0;width:16px;height:16px}
+.option input:checked + span{font-weight:500;color:#1a1a1a}
+.option.selected label{background:#f0f4ff;border-color:#818cf8}
+.submit-btn{width:100%;padding:14px;font-size:15px;font-weight:700;border:none;background:#1a1a1a;color:#fff;border-radius:11px;cursor:pointer;margin-top:1rem;letter-spacing:.01em;transition:opacity .15s}
+.submit-btn:hover{opacity:.85}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed}
+.result-header{text-align:center;padding:1.75rem 1rem 1.25rem}
+.student-name-display{font-size:14px;color:#888;margin-bottom:.5rem}
+.score-big{font-size:56px;font-weight:800;margin:.25rem 0;letter-spacing:-.02em}
+.pass{color:#16a34a}.fail{color:#dc2626}
+.score-sub{font-size:14px;color:#666;margin-bottom:.5rem}
+.result-badge{display:inline-block;margin-top:.5rem;font-size:13px;font-weight:700;padding:5px 18px;border-radius:30px}
+.badge-pass{background:#dcfce7;color:#15803d}
+.badge-fail{background:#fee2e2;color:#b91c1c}
+.breakdown-title{font-size:13px;font-weight:700;color:#666;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.05em}
+.breakdown-item{padding:12px 0;border-bottom:1px solid #f0f0f0}
+.breakdown-item:last-child{border:none;padding-bottom:0}
+.b-theory{font-size:11px;color:#4338ca;font-weight:700;margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
+.b-q{font-size:13px;color:#333;margin-bottom:6px;line-height:1.5}
+.b-status{display:flex;align-items:flex-start;gap:6px;font-size:13px;margin-bottom:4px}
+.b-correct-lbl{color:#16a34a;font-weight:700}
+.b-wrong-lbl{color:#dc2626;font-weight:700}
+.b-answer{color:#555;font-size:13px}
+.b-explanation{font-size:12px;color:#666;margin-top:6px;line-height:1.55;padding:8px 11px;background:#f9f9f9;border-radius:7px;border-left:3px solid #d1d5db}
+.progress-bar{height:4px;background:#e5e7eb;border-radius:2px;margin-bottom:1.5rem;overflow:hidden}
+.progress-fill{height:100%;background:#4f46e5;border-radius:2px;transition:width .3s}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="quiz-view">
+  <div class="card">
+    <h1>Classic Mass Media Effects Theories</h1>
+    <div class="sub">Doctoral Seminar &nbsp;·&nbsp; 5 Questions</div>
+    <div class="instructions">Answer each question based on your knowledge of the five classic mass media effects theories and their key founders. Your score is recorded automatically upon submission.</div>
+    <label class="name-label" for="student-name">Your full name</label>
+    <input type="text" id="student-name" class="name-input" placeholder="e.g. Dr. James Okafor" autocomplete="name">
+  </div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progress" style="width:0%"></div></div>
+
+  <form id="quiz-form" novalidate>
+
+    <div class="card">
+      <div class="theory-tag">Agenda-Setting Theory</div>
+      <div class="q-num">Question 1 of 5</div>
+      <div class="q-text">Maxwell McCombs and Donald Shaw introduced Agenda-Setting Theory in their landmark 1972 Chapel Hill study. What does this theory primarily argue about mass media's influence?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q1" value="0"><span>A. Mass media directly changes audience attitudes and deeply held beliefs</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="1"><span>B. Media tells audiences <em>what to think about</em>, not necessarily what to think</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="2"><span>C. Audiences are entirely passive receivers with no interpretive agency</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="3"><span>D. Media messages must pass through opinion leaders before reaching the public</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Two-Step Flow Theory</div>
+      <div class="q-num">Question 2 of 5</div>
+      <div class="q-text">Paul Lazarsfeld, Bernard Berelson, and Hazel Gaudet pioneered the Two-Step Flow model in their 1944 study <em>The People's Choice</em>. Which statement best describes this model?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q2" value="0"><span>A. Media messages flow directly and equally to all audience members at once</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="1"><span>B. Information travels from media to opinion leaders, who then relay it to the wider public</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="2"><span>C. Mass media effects are strongest among highly educated, high-income audiences</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="3"><span>D. Audiences selectively seek out only media that confirms their existing beliefs</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Cultivation Theory</div>
+      <div class="q-num">Question 3 of 5</div>
+      <div class="q-text">George Gerbner developed Cultivation Theory through his Cultural Indicators Project beginning in the 1960s. What long-term effect does this theory describe in heavy media consumers?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q3" value="0"><span>A. Heavy television viewing gradually shapes viewers' perceptions of social reality over time</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="1"><span>B. Repeated media exposure makes audiences increasingly immune to persuasion</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="2"><span>C. News media cultivates stronger civic engagement among younger audiences</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="3"><span>D. Regular church media use cultivates stronger denominational loyalty</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Uses &amp; Gratifications Theory</div>
+      <div class="q-num">Question 4 of 5</div>
+      <div class="q-text">Elihu Katz, Jay Blumler, and Michael Gurevitch formalized Uses &amp; Gratifications Theory in 1974. How does this theory fundamentally differ from earlier mass media effects models?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q4" value="0"><span>A. It focuses on how media reshapes unconscious behavior patterns</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="1"><span>B. It shifts focus from what media does <em>to</em> people, to what people actively do <em>with</em> media</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="2"><span>C. It argues that media effects are strongest during political campaigns</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="3"><span>D. It proposes that mass media has no measurable effect on behavior</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Spiral of Silence</div>
+      <div class="q-num">Question 5 of 5</div>
+      <div class="q-text">Elisabeth Noelle-Neumann introduced the Spiral of Silence in 1974. Which core dynamic does this theory identify in public opinion and mass communication?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q5" value="0"><span>A. Minority opinions grow louder and stronger when suppressed by mass media</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="1"><span>B. People sensing their views are in the minority stay silent to avoid isolation, amplifying the perceived majority</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="2"><span>C. Media actively silences dissent by refusing to cover minority viewpoints</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="3"><span>D. Religious communities develop separate media channels to preserve minority voices</span></label></li>
+      </ul>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submit-btn">Submit Quiz</button>
+  </form>
+</div>
+
+<div id="result-view" style="display:none"></div>
+
+</div>
+
+<script>
+const CORRECT = { q1:1, q2:1, q3:0, q4:1, q5:1 };
+const THEORIES = { q1:'Agenda-Setting Theory', q2:'Two-Step Flow Theory', q3:'Cultivation Theory', q4:'Uses & Gratifications Theory', q5:'Spiral of Silence' };
+const EXPLANATIONS = {
+  q1: 'McCombs & Shaw found that media shapes the public\'s issue priorities — by emphasizing certain topics, media tells us what issues matter, not necessarily how to feel about them.',
+  q2: 'Lazarsfeld discovered that media rarely influences people directly. Instead, "opinion leaders" — attentive, socially connected individuals — absorb media messages and relay them to their broader social networks.',
+  q3: 'Gerbner\'s research showed that heavy TV viewers come to see the world as more dangerous and crime-ridden than it actually is — a "mean world syndrome" — because TV overrepresents violence.',
+  q4: 'Earlier models treated audiences as passive. Katz, Blumler & Gurevitch reframed the question: audiences are active agents who deliberately choose media to fulfill needs like information, entertainment, personal identity, or social interaction.',
+  q5: 'Noelle-Neumann observed that people continuously scan their social environment. Those who sense their views are unpopular stay silent to avoid isolation — and their silence makes the majority view appear even stronger, creating a self-reinforcing spiral.'
+};
+const QUESTIONS = {
+  q1: 'McCombs & Shaw (1972) — Agenda-Setting Theory',
+  q2: 'Lazarsfeld, Berelson & Gaudet (1944) — Two-Step Flow',
+  q3: 'Gerbner (1960s) — Cultivation Theory',
+  q4: 'Katz, Blumler & Gurevitch (1974) — Uses & Gratifications',
+  q5: 'Noelle-Neumann (1974) — Spiral of Silence'
+};
+
+// Track progress
+document.querySelectorAll('input[type=radio]').forEach(r => {
+  r.addEventListener('change', updateProgress);
+});
+
+function updateProgress() {
+  const answered = Object.keys(CORRECT).filter(q => document.querySelector('input[name="'+q+'"]:checked')).length;
+  document.getElementById('progress').style.width = (answered / 5 * 100) + '%';
+}
+
+document.getElementById('quiz-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name = document.getElementById('student-name').value.trim();
+  if (!name) { alert('Please enter your full name before submitting.'); document.getElementById('student-name').focus(); return; }
+
+  let correct = 0;
+  const answers = {};
+  for (const q in CORRECT) {
+    const sel = document.querySelector('input[name="'+q+'"]:checked');
+    const chosen = sel ? parseInt(sel.value) : -1;
+    const isCorrect = chosen === CORRECT[q];
+    if (isCorrect) correct++;
+    answers[q] = { chosen, isCorrect };
+  }
+
+  const pct = Math.round(correct / 5 * 100);
+  const pass = pct >= 70;
+  const record = { name, timestamp: new Date().toISOString(), score: pct, correct, total: 5, answers };
+
+  // Save to shared storage so instructor widget can see it
+  try {
+    let arr = [];
+    try { const ex = await window.storage.get('mcq_results_effects_v1', true); if(ex) arr = JSON.parse(ex.value); } catch(err) {}
+    arr.push(record);
+    await window.storage.set('mcq_results_effects_v1', JSON.stringify(arr), true);
+  } catch(err) { console.warn('Storage unavailable:', err); }
+
+  document.getElementById('quiz-view').style.display = 'none';
+  const rv = document.getElementById('result-view');
+  rv.style.display = 'block';
+
+  let breakdown = '';
+  for (const q in CORRECT) {
+    const a = answers[q];
+    const optEls = document.querySelectorAll('input[name="'+q+'"]');
+    const chosenText = a.chosen >= 0 ? optEls[a.chosen].parentElement.querySelector('span').textContent : 'Not answered';
+    const correctText = optEls[CORRECT[q]].parentElement.querySelector('span').textContent;
+    breakdown += '<div class="breakdown-item">'
+      + '<div class="b-theory">'+THEORIES[q]+'</div>'
+      + '<div class="b-q">'+QUESTIONS[q]+'</div>'
+      + '<div class="b-status">'
+      + (a.isCorrect
+          ? '<span class="b-correct-lbl">✓ Correct</span>'
+          : '<span class="b-wrong-lbl">✗ Incorrect</span>')
+      + '</div>'
+      + (!a.isCorrect ? '<div class="b-answer"><strong>Correct answer:</strong> '+correctText+'</div>' : '')
+      + '<div class="b-explanation">'+EXPLANATIONS[q]+'</div>'
+      + '</div>';
+  }
+
+  rv.innerHTML = '<div class="card"><div class="result-header">'
+    + '<div class="student-name-display">'+name+'</div>'
+    + '<div class="score-big '+(pass?'pass':'fail')+'">'+pct+'%</div>'
+    + '<div class="score-sub">'+correct+' of 5 correct</div>'
+    + '<span class="result-badge '+(pass?'badge-pass':'badge-fail')+'">'+(pass?'Passed ✓':'Needs further review')+'</span>'
+    + '</div></div>'
+    + '<div class="card"><div class="breakdown-title">Answer breakdown</div>'+breakdown+'</div>';
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+</script>
+</body>
+</html>
