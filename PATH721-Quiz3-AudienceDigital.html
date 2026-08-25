@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audience Research, Digital Media & Platform Strategy</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f3;padding:1.5rem 1rem;color:#1a1a1a}
+.wrap{max-width:580px;margin:0 auto}
+.card{background:#fff;border-radius:14px;border:1px solid #e8e8e8;padding:1.375rem 1.25rem;margin-bottom:1rem}
+h1{font-size:19px;font-weight:700;margin-bottom:.25rem;line-height:1.35}
+.sub{font-size:13px;color:#888;margin-bottom:1rem}
+.instructions{font-size:14px;color:#555;line-height:1.6;padding:10px 14px;background:#eef2ff;border-radius:8px;margin-bottom:1.25rem;border-left:3px solid #6366f1}
+.name-label{font-size:13px;color:#444;font-weight:600;display:block;margin-bottom:6px}
+.name-input{width:100%;padding:10px 12px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;outline:none;transition:border .15s}
+.name-input:focus{border-color:#6366f1}
+.theory-tag{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;background:#eef2ff;color:#4338ca;margin-bottom:.5rem;font-weight:600;letter-spacing:.02em}
+.q-num{font-size:11px;font-weight:700;color:#aaa;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+.q-text{font-size:15px;font-weight:500;line-height:1.55;margin-bottom:1rem}
+.options{list-style:none;display:flex;flex-direction:column;gap:8px}
+.option label{display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:11px 13px;border-radius:9px;border:1.5px solid #e8e8e8;font-size:14px;line-height:1.45;transition:all .12s;background:#fff}
+.option label:hover{background:#f6f4ff;border-color:#c7d2fe}
+.option input[type=radio]{margin-top:2px;accent-color:#4f46e5;flex-shrink:0;width:16px;height:16px}
+.submit-btn{width:100%;padding:14px;font-size:15px;font-weight:700;border:none;background:#1a1a1a;color:#fff;border-radius:11px;cursor:pointer;margin-top:1rem;transition:opacity .15s}
+.submit-btn:hover{opacity:.85}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed}
+.progress-bar{height:4px;background:#e5e7eb;border-radius:2px;margin-bottom:1.5rem;overflow:hidden}
+.progress-fill{height:100%;background:#4f46e5;border-radius:2px;transition:width .3s}
+.result-header{text-align:center;padding:1.75rem 1rem 1.25rem}
+.score-big{font-size:56px;font-weight:800;margin:.25rem 0;letter-spacing:-.02em}
+.pass{color:#16a34a}.fail{color:#dc2626}
+.result-badge{display:inline-block;margin-top:.5rem;font-size:13px;font-weight:700;padding:5px 18px;border-radius:30px}
+.badge-pass{background:#dcfce7;color:#15803d}
+.badge-fail{background:#fee2e2;color:#b91c1c}
+.breakdown-title{font-size:13px;font-weight:700;color:#666;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.05em}
+.breakdown-item{padding:12px 0;border-bottom:1px solid #f0f0f0}
+.breakdown-item:last-child{border:none;padding-bottom:0}
+.b-theory{font-size:11px;color:#4338ca;font-weight:700;margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
+.b-q{font-size:13px;color:#333;margin-bottom:6px;line-height:1.5}
+.b-status{display:flex;align-items:flex-start;gap:6px;font-size:13px;margin-bottom:4px}
+.b-correct-lbl{color:#16a34a;font-weight:700}
+.b-wrong-lbl{color:#dc2626;font-weight:700}
+.b-answer{color:#555;font-size:13px;margin-bottom:4px}
+.b-explanation{font-size:12px;color:#666;margin-top:6px;line-height:1.55;padding:8px 11px;background:#f9f9f9;border-radius:7px;border-left:3px solid #d1d5db}
+.saving-notice{text-align:center;font-size:12px;color:#888;margin-top:8px;min-height:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="quiz-view">
+  <div class="card">
+    <h1>Audience Research, Digital Media & Platform Strategy</h1>
+    <div class="sub">PATH 721 · Doctoral Seminar · 5 Questions</div>
+    <div class="instructions">Answer each question based on your knowledge of audience research methods, generational media habits, and digital platform strategy for local church ministry.</div>
+    <label class="name-label" for="student-name">Your full name</label>
+    <input type="text" id="student-name" class="name-input" placeholder="e.g. Dr. James Okafor" autocomplete="name">
+  </div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progress" style="width:0%"></div></div>
+
+  <form id="quiz-form" novalidate>
+
+    <div class="card">
+      <div class="theory-tag">Audience Research</div>
+      <div class="q-num">Question 1 of 5</div>
+      <div class="q-text">In PATH 721 audience analysis, 'spiritual demographics' refers to which dimension of community research?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q1" value="0" required><span>A. The number of churches per capita in a geographic area</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="1" ><span>B. A person's current spiritual condition, faith background, openness to the gospel, and spiritual questions</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="2" ><span>C. Demographic data on church attendance rates by age and income</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="3" ><span>D. The ratio of SDA members to the general population in a zip code</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Generational Media Habits</div>
+      <div class="q-num">Question 2 of 5</div>
+      <div class="q-text">According to generational media research, which generation is described as 'mobile-first, social media native, and streaming only,' requiring platforms like Instagram Reels and YouTube Shorts for effective church outreach?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q2" value="0" required><span>A. Generation X (born 1965-1980)</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="1" ><span>B. Baby Boomers (born 1946-1964)</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="2" ><span>C. Millennials (born 1981-1996)</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="3" ><span>D. Generation Z (born 1997-2012)</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Platform Strategy</div>
+      <div class="q-num">Question 3 of 5</div>
+      <div class="q-text">The hub-spoke-hygiene content model teaches local churches to organize their media output into three tiers. Which of the following correctly identifies the 'spoke' content type?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q3" value="0" required><span>A. The weekly sermon or flagship broadcast program</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="1" ><span>B. Derivative content drawn from the hub — clips, quotes, devotionals, highlights</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="2" ><span>C. Utility content such as event announcements, office hours, and FAQs</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="3" ><span>D. Paid advertising campaigns targeting the surrounding community</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Digital Evangelism</div>
+      <div class="q-num">Question 4 of 5</div>
+      <div class="q-text">The media evangelism funnel describes five stages from community awareness to church membership. Which stage do most local church media ministries fail to move beyond, limiting baptism and growth outcomes?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q4" value="0" required><span>A. Stage 1 — Awareness: the community knows the church exists</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="1" ><span>B. Stage 2 — Interest: the community engages with content online</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="2" ><span>C. Stage 3 — Consideration: the community attends an event or series</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="3" ><span>D. Stage 4 — Conversion: a spiritual decision is made and a pastor is contacted</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Uses & Gratifications Applied</div>
+      <div class="q-num">Question 5 of 5</div>
+      <div class="q-text">A pastor notices that most people who watch the church's YouTube sermons never attend in person, but frequently comment and share the content. Applying Uses & Gratifications Theory, what is the most likely explanation?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q5" value="0" required><span>A. The church's in-person services are lower quality than the online content</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="1" ><span>B. YouTube viewers are using the church's media to meet specific needs — information, identity, or inspiration — without needing physical community</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="2" ><span>C. The church has failed to promote its in-person services effectively online</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="3" ><span>D. Online viewers are passive consumers who lack genuine spiritual interest</span></label></li>
+      </ul>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submit-btn">Submit Quiz</button>
+    <div class="saving-notice" id="saving-notice"></div>
+  </form>
+</div>
+
+<div id="result-view" style="display:none"></div>
+
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyuRDzebox8nE1gkGySdyzG24HuzGHZCqi2zKBlvDrpPl-H6-1GjN8NQ166qgZrgrvlTg/exec';
+const CORRECT = { q1:1, q2:2, q3:1, q4:1, q5:1 };
+const THEORIES = { q1:'Audience Research', q2:'Generational Media Habits', q3:'Platform Strategy', q4:'Digital Evangelism', q5:'Uses & Gratifications Applied' };
+const QUESTIONS = { q1:'Audience Research — Day 3, PATH 721', q2:'Generational Media Habits — Day 3, PATH 721', q3:'Hub-Spoke-Hygiene Model — Day 5, PATH 721', q4:'Media Evangelism Funnel — Day 7, PATH 721', q5:'Katz, Blumler & Gurevitch (1974) — Uses & Gratifications Applied' };
+const EXPLANATIONS = { q1:'Spiritual demographics go beyond who people are (demographics) and why they make choices (psychographics) to address where they are spiritually — their faith background, church wounds, openness to the gospel, and the spiritual questions they are actively asking. This third layer is essential for designing targeted ministry media that meets people where they actually are.', q2:'Millennials are the first generation to grow up with the internet as a permanent fixture. They are mobile-first, consume media primarily through social platforms and streaming services, and rarely engage with traditional broadcast TV or print. Churches reaching Millennials must prioritize digital-native platforms and on-demand content formats.', q3:'In the hub-spoke-hygiene model: the Hub is flagship content (the weekly sermon or program); Spokes are derivative pieces drawn from that hub — short clips, pull quotes, devotional excerpts, behind-the-scenes content; and Hygiene is utility content that answers practical questions. Spoke content multiplies the reach of one primary piece across multiple platforms and formats.', q4:'Most church media ministries invest in creating content and building an online presence — Stage 2 — but have no system to move interested viewers toward a personal spiritual decision or church connection. Without a clear call to action, a follow-up system, and a human handoff, media outreach produces engagement metrics but not disciples.', q5:"Uses & Gratifications Theory holds that audiences actively choose media to satisfy specific needs. Online-only viewers may be meeting real spiritual needs — encouragement, teaching, identity reinforcement — through the church's content without needing the social demands of in-person attendance. This is not failure; it is a distinct audience segment with distinct needs that deserves its own pastoral strategy." };
+
+document.querySelectorAll('input[type=radio]').forEach(r => {
+  r.addEventListener('change', () => {
+    const answered = Object.keys(CORRECT).filter(q => document.querySelector('input[name="'+q+'"]:checked')).length;
+    document.getElementById('progress').style.width = (answered / 5 * 100) + '%';
+  });
+});
+
+document.getElementById('quiz-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name = document.getElementById('student-name').value.trim();
+  if (!name) { alert('Please enter your full name before submitting.'); document.getElementById('student-name').focus(); return; }
+  const btn = document.getElementById('submit-btn');
+  const notice = document.getElementById('saving-notice');
+  btn.disabled = true; btn.textContent = 'Submitting...';
+  notice.textContent = 'Saving your result...';
+  let correct = 0;
+  const answers = {};
+  for (const q in CORRECT) {
+    const sel = document.querySelector('input[name="'+q+'"]:checked');
+    const chosen = sel ? parseInt(sel.value) : -1;
+    const isCorrect = chosen === CORRECT[q];
+    if (isCorrect) correct++;
+    answers[q] = { chosen, isCorrect };
+  }
+  const pct = Math.round(correct / 5 * 100);
+  const record = { name, score: pct, correct, total: 5 };
+  try {
+    await fetch(SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(record) });
+    notice.textContent = 'Result saved to instructor sheet.';
+  } catch(err) {
+    notice.textContent = 'Note: result could not be saved — check your connection.';
+  }
+  document.getElementById('quiz-view').style.display = 'none';
+  const rv = document.getElementById('result-view');
+  rv.style.display = 'block';
+  let breakdown = '';
+  for (const q in CORRECT) {
+    const a = answers[q];
+    const opts = document.querySelectorAll('input[name="'+q+'"]');
+    const correctText = opts[CORRECT[q]].parentElement.querySelector('span').textContent;
+    breakdown += '<div class="breakdown-item">'
+      + '<div class="b-theory">' + THEORIES[q] + '</div>'
+      + '<div class="b-q">' + QUESTIONS[q] + '</div>'
+      + '<div class="b-status">' + (a.isCorrect ? '<span class="b-correct-lbl">Correct</span>' : '<span class="b-wrong-lbl">Incorrect</span>') + '</div>'
+      + (!a.isCorrect ? '<div class="b-answer"><strong>Correct answer:</strong> ' + correctText + '</div>' : '')
+      + '<div class="b-explanation">' + EXPLANATIONS[q] + '</div>'
+      + '</div>';
+  }
+  rv.innerHTML = '<div class="card"><div class="result-header">'
+    + '<div style="font-size:14px;color:#888">' + name + '</div>'
+    + '<div class="score-big ' + (pct >= 70 ? 'pass' : 'fail') + '">' + pct + '%</div>'
+    + '<div style="font-size:14px;color:#666">' + correct + ' of 5 correct</div>'
+    + '<span class="result-badge ' + (pct >= 70 ? 'badge-pass' : 'badge-fail') + '">' + (pct >= 70 ? 'Passed' : 'Needs further review') + '</span>'
+    + '</div></div>'
+    + '<div class="card"><div class="breakdown-title">Answer breakdown</div>' + breakdown + '</div>';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
