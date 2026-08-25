@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broadcast Production, Visual Communication & Church Branding</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f3;padding:1.5rem 1rem;color:#1a1a1a}
+.wrap{max-width:580px;margin:0 auto}
+.card{background:#fff;border-radius:14px;border:1px solid #e8e8e8;padding:1.375rem 1.25rem;margin-bottom:1rem}
+h1{font-size:19px;font-weight:700;margin-bottom:.25rem;line-height:1.35}
+.sub{font-size:13px;color:#888;margin-bottom:1rem}
+.instructions{font-size:14px;color:#555;line-height:1.6;padding:10px 14px;background:#eef2ff;border-radius:8px;margin-bottom:1.25rem;border-left:3px solid #6366f1}
+.name-label{font-size:13px;color:#444;font-weight:600;display:block;margin-bottom:6px}
+.name-input{width:100%;padding:10px 12px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;outline:none;transition:border .15s}
+.name-input:focus{border-color:#6366f1}
+.theory-tag{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;background:#eef2ff;color:#4338ca;margin-bottom:.5rem;font-weight:600;letter-spacing:.02em}
+.q-num{font-size:11px;font-weight:700;color:#aaa;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+.q-text{font-size:15px;font-weight:500;line-height:1.55;margin-bottom:1rem}
+.options{list-style:none;display:flex;flex-direction:column;gap:8px}
+.option label{display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:11px 13px;border-radius:9px;border:1.5px solid #e8e8e8;font-size:14px;line-height:1.45;transition:all .12s;background:#fff}
+.option label:hover{background:#f6f4ff;border-color:#c7d2fe}
+.option input[type=radio]{margin-top:2px;accent-color:#4f46e5;flex-shrink:0;width:16px;height:16px}
+.submit-btn{width:100%;padding:14px;font-size:15px;font-weight:700;border:none;background:#1a1a1a;color:#fff;border-radius:11px;cursor:pointer;margin-top:1rem;transition:opacity .15s}
+.submit-btn:hover{opacity:.85}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed}
+.progress-bar{height:4px;background:#e5e7eb;border-radius:2px;margin-bottom:1.5rem;overflow:hidden}
+.progress-fill{height:100%;background:#4f46e5;border-radius:2px;transition:width .3s}
+.result-header{text-align:center;padding:1.75rem 1rem 1.25rem}
+.score-big{font-size:56px;font-weight:800;margin:.25rem 0;letter-spacing:-.02em}
+.pass{color:#16a34a}.fail{color:#dc2626}
+.result-badge{display:inline-block;margin-top:.5rem;font-size:13px;font-weight:700;padding:5px 18px;border-radius:30px}
+.badge-pass{background:#dcfce7;color:#15803d}
+.badge-fail{background:#fee2e2;color:#b91c1c}
+.breakdown-title{font-size:13px;font-weight:700;color:#666;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.05em}
+.breakdown-item{padding:12px 0;border-bottom:1px solid #f0f0f0}
+.breakdown-item:last-child{border:none;padding-bottom:0}
+.b-theory{font-size:11px;color:#4338ca;font-weight:700;margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
+.b-q{font-size:13px;color:#333;margin-bottom:6px;line-height:1.5}
+.b-status{display:flex;align-items:flex-start;gap:6px;font-size:13px;margin-bottom:4px}
+.b-correct-lbl{color:#16a34a;font-weight:700}
+.b-wrong-lbl{color:#dc2626;font-weight:700}
+.b-answer{color:#555;font-size:13px;margin-bottom:4px}
+.b-explanation{font-size:12px;color:#666;margin-top:6px;line-height:1.55;padding:8px 11px;background:#f9f9f9;border-radius:7px;border-left:3px solid #d1d5db}
+.saving-notice{text-align:center;font-size:12px;color:#888;margin-top:8px;min-height:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="quiz-view">
+  <div class="card">
+    <h1>Broadcast Production, Visual Communication & Church Branding</h1>
+    <div class="sub">PATH 721 · Doctoral Seminar · 5 Questions</div>
+    <div class="instructions">Answer each question based on your knowledge of broadcast production fundamentals, streaming platforms, visual communication, and church brand identity.</div>
+    <label class="name-label" for="student-name">Your full name</label>
+    <input type="text" id="student-name" class="name-input" placeholder="e.g. Dr. James Okafor" autocomplete="name">
+  </div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progress" style="width:0%"></div></div>
+
+  <form id="quiz-form" novalidate>
+
+    <div class="card">
+      <div class="theory-tag">Broadcast Production</div>
+      <div class="q-num">Question 1 of 5</div>
+      <div class="q-text">When setting up a three-point lighting system for a church broadcast, what is the correct function of the 'fill light'?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q1" value="0" required><span>A. To create dramatic shadows that add visual interest to the subject</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="1" ><span>B. To illuminate the background and separate the subject from it</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="2" ><span>C. To soften shadows created by the key light on the opposite side of the subject</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="3" ><span>D. To light the subject from behind, creating a halo or rim effect</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Streaming Platforms</div>
+      <div class="q-num">Question 2 of 5</div>
+      <div class="q-text">StreamYard and Ecamm Live are browser-based and Mac-based streaming tools respectively. Which of the following best describes their primary advantage over OBS for a local church with limited technical volunteers?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q2" value="0" required><span>A. They produce higher video quality than OBS at equivalent bitrates</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="1" ><span>B. They are free and require no software installation on any device</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="2" ><span>C. They offer simpler interfaces with guest integration and multi-destination streaming without deep technical configuration</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="3" ><span>D. They are the only tools approved for streaming to Hope Channel</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Visual Communication</div>
+      <div class="q-num">Question 3 of 5</div>
+      <div class="q-text">In church brand identity development, which of the following statements correctly distinguishes a church's 'brand' from its 'logo'?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q3" value="0" required><span>A. The logo is the legally protected element; the brand is optional</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="1" ><span>B. The brand is the total experience of the church in the community; the logo is one visual element within that brand</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="2" ><span>C. The logo communicates doctrine; the brand communicates culture</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="3" ><span>D. Brand applies only to digital media; logo applies only to print</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Print Media Strategy</div>
+      <div class="q-num">Question 4 of 5</div>
+      <div class="q-text">A church is deciding between a direct mail campaign and a social media ad campaign to promote an evangelistic series. Which of the following is the most accurate statement about print mail's advantage in this context?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q4" value="0" required><span>A. Print mail reaches younger audiences more effectively than social media</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="1" ><span>B. Print mail is always less expensive per household than digital advertising</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="2" ><span>C. A physical mailer can remain in a home for weeks, providing repeated exposure that a social media post cannot</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="3" ><span>D. Print mail generates more online registrations than digital campaigns</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Media Ministry Leadership</div>
+      <div class="q-num">Question 5 of 5</div>
+      <div class="q-text">Applying Kurt Lewin's three-stage change model (unfreezing, moving, refreezing) to introducing a new church livestreaming ministry, which action belongs to the 'unfreezing' stage?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q5" value="0" required><span>A. Training the volunteer broadcast team on camera and audio equipment</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="1" ><span>B. Launching the first live worship broadcast on YouTube</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="2" ><span>C. Creating urgency and awareness among leadership that the current approach is no longer sufficient</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="3" ><span>D. Establishing written media ministry policies and editorial standards</span></label></li>
+      </ul>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submit-btn">Submit Quiz</button>
+    <div class="saving-notice" id="saving-notice"></div>
+  </form>
+</div>
+
+<div id="result-view" style="display:none"></div>
+
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyuRDzebox8nE1gkGySdyzG24HuzGHZCqi2zKBlvDrpPl-H6-1GjN8NQ166qgZrgrvlTg/exec';
+const CORRECT = { q1:2, q2:2, q3:1, q4:2, q5:2 };
+const THEORIES = { q1:'Broadcast Production', q2:'Streaming Platforms', q3:'Visual Communication', q4:'Print Media Strategy', q5:'Media Ministry Leadership' };
+const QUESTIONS = { q1:'Three-Point Lighting — Day 4, PATH 721', q2:'Streaming Encoders — Day 4, PATH 721', q3:'Church Brand Identity — Day 6, PATH 721', q4:'Print Media Strategy — Day 6, PATH 721', q5:'Kurt Lewin (1890-1947) — Change Theory Applied' };
+const EXPLANATIONS = { q1:'In three-point lighting: the Key Light is the primary light source on one side of the subject; the Fill Light is placed on the opposite side to soften and reduce the shadows created by the key light; and the Back Light (or rim light) separates the subject from the background. The fill light controls contrast — a weaker fill creates more dramatic shadows; a stronger fill produces a flatter, more even look.', q2:'StreamYard and Ecamm Live are designed for accessibility — their interfaces are far simpler than OBS, they handle guest video calls natively (useful for hybrid worship), and they can stream simultaneously to multiple platforms (Facebook Live, YouTube, Instagram Live) with minimal setup. OBS is more powerful but has a steep learning curve that can be a barrier for volunteer-run church media teams.', q3:'A logo is a single graphic mark — one element of visual identity. A brand encompasses the total experience a community has with the church: the name, visual system, communication style, values expressed in media, how staff answer the phone, and what the building looks like. Everything communicates. Brand consistency means all of these elements align to tell the same story.', q4:"Print's persistence is its unique advantage. A well-designed mailer placed on a refrigerator or counter provides repeated passive impressions over days or weeks. A social media post competes in a feed and is forgotten within hours. For evangelistic campaigns targeting households in a specific zip code, direct mail and digital work best together — mail for persistence and presence, digital for response and engagement.", q5:"Lewin's unfreezing stage is about disrupting the status quo — helping people recognize that current patterns must change. For a church media launch, this means building awareness among the board and congregation that the church's current communication approach is leaving people unreached. Without successful unfreezing, the moving (implementation) and refreezing (institutionalization) stages will meet resistance. Change begins with creating a felt need for change." };
+
+document.querySelectorAll('input[type=radio]').forEach(r => {
+  r.addEventListener('change', () => {
+    const answered = Object.keys(CORRECT).filter(q => document.querySelector('input[name="'+q+'"]:checked')).length;
+    document.getElementById('progress').style.width = (answered / 5 * 100) + '%';
+  });
+});
+
+document.getElementById('quiz-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name = document.getElementById('student-name').value.trim();
+  if (!name) { alert('Please enter your full name before submitting.'); document.getElementById('student-name').focus(); return; }
+  const btn = document.getElementById('submit-btn');
+  const notice = document.getElementById('saving-notice');
+  btn.disabled = true; btn.textContent = 'Submitting...';
+  notice.textContent = 'Saving your result...';
+  let correct = 0;
+  const answers = {};
+  for (const q in CORRECT) {
+    const sel = document.querySelector('input[name="'+q+'"]:checked');
+    const chosen = sel ? parseInt(sel.value) : -1;
+    const isCorrect = chosen === CORRECT[q];
+    if (isCorrect) correct++;
+    answers[q] = { chosen, isCorrect };
+  }
+  const pct = Math.round(correct / 5 * 100);
+  const record = { name, score: pct, correct, total: 5 };
+  try {
+    await fetch(SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(record) });
+    notice.textContent = 'Result saved to instructor sheet.';
+  } catch(err) {
+    notice.textContent = 'Note: result could not be saved — check your connection.';
+  }
+  document.getElementById('quiz-view').style.display = 'none';
+  const rv = document.getElementById('result-view');
+  rv.style.display = 'block';
+  let breakdown = '';
+  for (const q in CORRECT) {
+    const a = answers[q];
+    const opts = document.querySelectorAll('input[name="'+q+'"]');
+    const correctText = opts[CORRECT[q]].parentElement.querySelector('span').textContent;
+    breakdown += '<div class="breakdown-item">'
+      + '<div class="b-theory">' + THEORIES[q] + '</div>'
+      + '<div class="b-q">' + QUESTIONS[q] + '</div>'
+      + '<div class="b-status">' + (a.isCorrect ? '<span class="b-correct-lbl">Correct</span>' : '<span class="b-wrong-lbl">Incorrect</span>') + '</div>'
+      + (!a.isCorrect ? '<div class="b-answer"><strong>Correct answer:</strong> ' + correctText + '</div>' : '')
+      + '<div class="b-explanation">' + EXPLANATIONS[q] + '</div>'
+      + '</div>';
+  }
+  rv.innerHTML = '<div class="card"><div class="result-header">'
+    + '<div style="font-size:14px;color:#888">' + name + '</div>'
+    + '<div class="score-big ' + (pct >= 70 ? 'pass' : 'fail') + '">' + pct + '%</div>'
+    + '<div style="font-size:14px;color:#666">' + correct + ' of 5 correct</div>'
+    + '<span class="result-badge ' + (pct >= 70 ? 'badge-pass' : 'badge-fail') + '">' + (pct >= 70 ? 'Passed' : 'Needs further review') + '</span>'
+    + '</div></div>'
+    + '<div class="card"><div class="breakdown-title">Answer breakdown</div>' + breakdown + '</div>';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
