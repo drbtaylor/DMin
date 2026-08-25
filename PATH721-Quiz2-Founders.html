@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Communication Founders — Lasswell, Lazarsfeld, Lewin & McLuhan</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f3;padding:1.5rem 1rem;color:#1a1a1a}
+.wrap{max-width:580px;margin:0 auto}
+.card{background:#fff;border-radius:14px;border:1px solid #e8e8e8;padding:1.375rem 1.25rem;margin-bottom:1rem}
+h1{font-size:19px;font-weight:700;margin-bottom:.25rem;line-height:1.35}
+.sub{font-size:13px;color:#888;margin-bottom:1rem}
+.instructions{font-size:14px;color:#555;line-height:1.6;padding:10px 14px;background:#eef2ff;border-radius:8px;margin-bottom:1.25rem;border-left:3px solid #6366f1}
+.name-label{font-size:13px;color:#444;font-weight:600;display:block;margin-bottom:6px}
+.name-input{width:100%;padding:10px 12px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;outline:none;transition:border .15s}
+.name-input:focus{border-color:#6366f1}
+.theory-tag{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;background:#eef2ff;color:#4338ca;margin-bottom:.5rem;font-weight:600;letter-spacing:.02em}
+.q-num{font-size:11px;font-weight:700;color:#aaa;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+.q-text{font-size:15px;font-weight:500;line-height:1.55;margin-bottom:1rem}
+.options{list-style:none;display:flex;flex-direction:column;gap:8px}
+.option label{display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:11px 13px;border-radius:9px;border:1.5px solid #e8e8e8;font-size:14px;line-height:1.45;transition:all .12s;background:#fff}
+.option label:hover{background:#f6f4ff;border-color:#c7d2fe}
+.option input[type=radio]{margin-top:2px;accent-color:#4f46e5;flex-shrink:0;width:16px;height:16px}
+.submit-btn{width:100%;padding:14px;font-size:15px;font-weight:700;border:none;background:#1a1a1a;color:#fff;border-radius:11px;cursor:pointer;margin-top:1rem;transition:opacity .15s}
+.submit-btn:hover{opacity:.85}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed}
+.progress-bar{height:4px;background:#e5e7eb;border-radius:2px;margin-bottom:1.5rem;overflow:hidden}
+.progress-fill{height:100%;background:#4f46e5;border-radius:2px;transition:width .3s}
+.result-header{text-align:center;padding:1.75rem 1rem 1.25rem}
+.score-big{font-size:56px;font-weight:800;margin:.25rem 0;letter-spacing:-.02em}
+.pass{color:#16a34a}.fail{color:#dc2626}
+.result-badge{display:inline-block;margin-top:.5rem;font-size:13px;font-weight:700;padding:5px 18px;border-radius:30px}
+.badge-pass{background:#dcfce7;color:#15803d}
+.badge-fail{background:#fee2e2;color:#b91c1c}
+.breakdown-title{font-size:13px;font-weight:700;color:#666;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.05em}
+.breakdown-item{padding:12px 0;border-bottom:1px solid #f0f0f0}
+.breakdown-item:last-child{border:none;padding-bottom:0}
+.b-theory{font-size:11px;color:#4338ca;font-weight:700;margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
+.b-q{font-size:13px;color:#333;margin-bottom:6px;line-height:1.5}
+.b-status{display:flex;align-items:flex-start;gap:6px;font-size:13px;margin-bottom:4px}
+.b-correct-lbl{color:#16a34a;font-weight:700}
+.b-wrong-lbl{color:#dc2626;font-weight:700}
+.b-answer{color:#555;font-size:13px;margin-bottom:4px}
+.b-explanation{font-size:12px;color:#666;margin-top:6px;line-height:1.55;padding:8px 11px;background:#f9f9f9;border-radius:7px;border-left:3px solid #d1d5db}
+.saving-notice{text-align:center;font-size:12px;color:#888;margin-top:8px;min-height:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="quiz-view">
+  <div class="card">
+    <h1>Communication Founders — Lasswell, Lazarsfeld, Lewin & McLuhan</h1>
+    <div class="sub">PATH 721 · Doctoral Seminar · 5 Questions</div>
+    <div class="instructions">Answer each question based on your knowledge of the key communication founders and their theories. Your score is recorded automatically upon submission.</div>
+    <label class="name-label" for="student-name">Your full name</label>
+    <input type="text" id="student-name" class="name-input" placeholder="e.g. Dr. James Okafor" autocomplete="name">
+  </div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progress" style="width:0%"></div></div>
+
+  <form id="quiz-form" novalidate>
+
+    <div class="card">
+      <div class="theory-tag">Harold Lasswell</div>
+      <div class="q-num">Question 1 of 5</div>
+      <div class="q-text">Harold Lasswell's 1948 model asks: Who says what, in which channel, to whom, with what effect? Which field did Lasswell primarily draw from to develop this framework?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q1" value="0" required><span>A. Sociology and ethnographic fieldwork</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="1" ><span>B. Political science and wartime propaganda analysis</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="2" ><span>C. Psychology and behavioral conditioning research</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="3" ><span>D. Journalism and newspaper circulation studies</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Paul Lazarsfeld</div>
+      <div class="q-num">Question 2 of 5</div>
+      <div class="q-text">Paul Lazarsfeld's research at Columbia University fundamentally challenged the 'hypodermic needle' or 'magic bullet' theory of media effects. What did his research reveal instead?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q2" value="0" required><span>A. Media has no measurable effect on political opinion</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="1" ><span>B. Media effects are strongest among rural and less-educated audiences</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="2" ><span>C. Personal relationships and opinion leaders mediate media influence</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="3" ><span>D. Audiences are completely passive and absorb media messages directly</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Kurt Lewin</div>
+      <div class="q-num">Question 3 of 5</div>
+      <div class="q-text">Kurt Lewin introduced Gatekeeping Theory to communication research. In a local church media context, which of the following best illustrates the role of a gatekeeper?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q3" value="0" required><span>A. A congregation member who shares the church's social media posts</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="1" ><span>B. The pastor who decides which announcements appear in the bulletin and what is broadcast</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="2" ><span>C. A denominational official who sets media policy for the entire conference</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="3" ><span>D. A viewer who chooses whether to watch the church's livestream</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Marshall McLuhan</div>
+      <div class="q-num">Question 4 of 5</div>
+      <div class="q-text">Marshall McLuhan's famous phrase 'the medium is the message' appeared in Understanding Media (1964). What does this phrase mean for a pastor choosing between delivering a sermon in person, on YouTube, or on TikTok?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q4" value="0" required><span>A. The theological content of the sermon is all that matters regardless of platform</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="1" ><span>B. Each platform is identical in its effect as long as the content is the same</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="2" ><span>C. The platform itself shapes how the message is received, independent of the content</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="3" ><span>D. Digital platforms always reduce the spiritual impact of a sermon</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Diffusion of Innovations</div>
+      <div class="q-num">Question 5 of 5</div>
+      <div class="q-text">Everett Rogers identified five categories of technology adopters in Diffusion of Innovations (2003). Which category describes the congregation members most likely to resist or delay adopting your church's new livestreaming ministry?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q5" value="0" required><span>A. Early Adopters — visionary members who embrace new ideas quickly</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="1" ><span>B. Early Majority — pragmatic members who adopt after seeing others succeed</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="2" ><span>C. Late Majority — skeptical members who adopt only under social pressure</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="3" ><span>D. Laggards — traditional members who are last to adopt or may never adopt</span></label></li>
+      </ul>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submit-btn">Submit Quiz</button>
+    <div class="saving-notice" id="saving-notice"></div>
+  </form>
+</div>
+
+<div id="result-view" style="display:none"></div>
+
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyuRDzebox8nE1gkGySdyzG24HuzGHZCqi2zKBlvDrpPl-H6-1GjN8NQ166qgZrgrvlTg/exec';
+const CORRECT = { q1:1, q2:2, q3:1, q4:2, q5:3 };
+const THEORIES = { q1:'Harold Lasswell', q2:'Paul Lazarsfeld', q3:'Kurt Lewin', q4:'Marshall McLuhan', q5:'Diffusion of Innovations' };
+const QUESTIONS = { q1:'Harold Lasswell (1902-1978) — Linear Communication Model', q2:'Paul Lazarsfeld (1901-1976) — Two-Step Flow Theory', q3:'Kurt Lewin (1890-1947) — Gatekeeping Theory', q4:'Marshall McLuhan (1911-1980) — The Medium is the Message', q5:'Everett Rogers (1931-2004) — Diffusion of Innovations (2003)' };
+const EXPLANATIONS = { q1:'Lasswell was a political scientist at Yale who analyzed Allied and Axis propaganda during World War I and II. His model emerged directly from studying how governments used mass media to shape public opinion during wartime — making political science and propaganda analysis its foundation.', q2:"Lazarsfeld's People's Choice study (1944) found that personal influence — through opinion leaders in social networks — was far more powerful in shaping political decisions than direct media exposure. This directly contradicted the assumption that media worked like a needle injecting beliefs into passive audiences.", q3:'Lewin identified that every communication channel has a gatekeeper who controls what information flows through it. In the local church, the pastor functions as the primary gatekeeper — deciding what is communicated, how, and when. This is an authority that carries significant responsibility for shaping congregational and community perception.', q4:"McLuhan argued that the medium of communication — not just its content — shapes the audience's perception and experience. A sermon on TikTok is a fundamentally different communication act than the same sermon in a sanctuary or on YouTube. The platform constrains length, tone, visual style, and audience expectations, reshaping the message before a word is spoken.", q5:"Rogers' Laggards are the last to adopt innovations — often deeply traditional, suspicious of change, and oriented toward the past. In church media ministry, Laggards may resist livestreaming, social media, or digital giving. Rogers' framework helps pastors understand that resistance is predictable, not personal, and plan adoption strategies accordingly." };
+
+document.querySelectorAll('input[type=radio]').forEach(r => {
+  r.addEventListener('change', () => {
+    const answered = Object.keys(CORRECT).filter(q => document.querySelector('input[name="'+q+'"]:checked')).length;
+    document.getElementById('progress').style.width = (answered / 5 * 100) + '%';
+  });
+});
+
+document.getElementById('quiz-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name = document.getElementById('student-name').value.trim();
+  if (!name) { alert('Please enter your full name before submitting.'); document.getElementById('student-name').focus(); return; }
+  const btn = document.getElementById('submit-btn');
+  const notice = document.getElementById('saving-notice');
+  btn.disabled = true; btn.textContent = 'Submitting...';
+  notice.textContent = 'Saving your result...';
+  let correct = 0;
+  const answers = {};
+  for (const q in CORRECT) {
+    const sel = document.querySelector('input[name="'+q+'"]:checked');
+    const chosen = sel ? parseInt(sel.value) : -1;
+    const isCorrect = chosen === CORRECT[q];
+    if (isCorrect) correct++;
+    answers[q] = { chosen, isCorrect };
+  }
+  const pct = Math.round(correct / 5 * 100);
+  const record = { name, score: pct, correct, total: 5 };
+  try {
+    await fetch(SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(record) });
+    notice.textContent = 'Result saved to instructor sheet.';
+  } catch(err) {
+    notice.textContent = 'Note: result could not be saved — check your connection.';
+  }
+  document.getElementById('quiz-view').style.display = 'none';
+  const rv = document.getElementById('result-view');
+  rv.style.display = 'block';
+  let breakdown = '';
+  for (const q in CORRECT) {
+    const a = answers[q];
+    const opts = document.querySelectorAll('input[name="'+q+'"]');
+    const correctText = opts[CORRECT[q]].parentElement.querySelector('span').textContent;
+    breakdown += '<div class="breakdown-item">'
+      + '<div class="b-theory">' + THEORIES[q] + '</div>'
+      + '<div class="b-q">' + QUESTIONS[q] + '</div>'
+      + '<div class="b-status">' + (a.isCorrect ? '<span class="b-correct-lbl">Correct</span>' : '<span class="b-wrong-lbl">Incorrect</span>') + '</div>'
+      + (!a.isCorrect ? '<div class="b-answer"><strong>Correct answer:</strong> ' + correctText + '</div>' : '')
+      + '<div class="b-explanation">' + EXPLANATIONS[q] + '</div>'
+      + '</div>';
+  }
+  rv.innerHTML = '<div class="card"><div class="result-header">'
+    + '<div style="font-size:14px;color:#888">' + name + '</div>'
+    + '<div class="score-big ' + (pct >= 70 ? 'pass' : 'fail') + '">' + pct + '%</div>'
+    + '<div style="font-size:14px;color:#666">' + correct + ' of 5 correct</div>'
+    + '<span class="result-badge ' + (pct >= 70 ? 'badge-pass' : 'badge-fail') + '">' + (pct >= 70 ? 'Passed' : 'Needs further review') + '</span>'
+    + '</div></div>'
+    + '<div class="card"><div class="breakdown-title">Answer breakdown</div>' + breakdown + '</div>';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
