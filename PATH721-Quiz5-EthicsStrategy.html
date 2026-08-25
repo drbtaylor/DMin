@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SDA Media Ministry, Ethics, Strategic Planning & OKRs</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f3;padding:1.5rem 1rem;color:#1a1a1a}
+.wrap{max-width:580px;margin:0 auto}
+.card{background:#fff;border-radius:14px;border:1px solid #e8e8e8;padding:1.375rem 1.25rem;margin-bottom:1rem}
+h1{font-size:19px;font-weight:700;margin-bottom:.25rem;line-height:1.35}
+.sub{font-size:13px;color:#888;margin-bottom:1rem}
+.instructions{font-size:14px;color:#555;line-height:1.6;padding:10px 14px;background:#eef2ff;border-radius:8px;margin-bottom:1.25rem;border-left:3px solid #6366f1}
+.name-label{font-size:13px;color:#444;font-weight:600;display:block;margin-bottom:6px}
+.name-input{width:100%;padding:10px 12px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;outline:none;transition:border .15s}
+.name-input:focus{border-color:#6366f1}
+.theory-tag{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;background:#eef2ff;color:#4338ca;margin-bottom:.5rem;font-weight:600;letter-spacing:.02em}
+.q-num{font-size:11px;font-weight:700;color:#aaa;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+.q-text{font-size:15px;font-weight:500;line-height:1.55;margin-bottom:1rem}
+.options{list-style:none;display:flex;flex-direction:column;gap:8px}
+.option label{display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:11px 13px;border-radius:9px;border:1.5px solid #e8e8e8;font-size:14px;line-height:1.45;transition:all .12s;background:#fff}
+.option label:hover{background:#f6f4ff;border-color:#c7d2fe}
+.option input[type=radio]{margin-top:2px;accent-color:#4f46e5;flex-shrink:0;width:16px;height:16px}
+.submit-btn{width:100%;padding:14px;font-size:15px;font-weight:700;border:none;background:#1a1a1a;color:#fff;border-radius:11px;cursor:pointer;margin-top:1rem;transition:opacity .15s}
+.submit-btn:hover{opacity:.85}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed}
+.progress-bar{height:4px;background:#e5e7eb;border-radius:2px;margin-bottom:1.5rem;overflow:hidden}
+.progress-fill{height:100%;background:#4f46e5;border-radius:2px;transition:width .3s}
+.result-header{text-align:center;padding:1.75rem 1rem 1.25rem}
+.score-big{font-size:56px;font-weight:800;margin:.25rem 0;letter-spacing:-.02em}
+.pass{color:#16a34a}.fail{color:#dc2626}
+.result-badge{display:inline-block;margin-top:.5rem;font-size:13px;font-weight:700;padding:5px 18px;border-radius:30px}
+.badge-pass{background:#dcfce7;color:#15803d}
+.badge-fail{background:#fee2e2;color:#b91c1c}
+.breakdown-title{font-size:13px;font-weight:700;color:#666;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.05em}
+.breakdown-item{padding:12px 0;border-bottom:1px solid #f0f0f0}
+.breakdown-item:last-child{border:none;padding-bottom:0}
+.b-theory{font-size:11px;color:#4338ca;font-weight:700;margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
+.b-q{font-size:13px;color:#333;margin-bottom:6px;line-height:1.5}
+.b-status{display:flex;align-items:flex-start;gap:6px;font-size:13px;margin-bottom:4px}
+.b-correct-lbl{color:#16a34a;font-weight:700}
+.b-wrong-lbl{color:#dc2626;font-weight:700}
+.b-answer{color:#555;font-size:13px;margin-bottom:4px}
+.b-explanation{font-size:12px;color:#666;margin-top:6px;line-height:1.55;padding:8px 11px;background:#f9f9f9;border-radius:7px;border-left:3px solid #d1d5db}
+.saving-notice{text-align:center;font-size:12px;color:#888;margin-top:8px;min-height:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="quiz-view">
+  <div class="card">
+    <h1>SDA Media Ministry, Ethics, Strategic Planning & OKRs</h1>
+    <div class="sub">PATH 721 · Doctoral Seminar · 5 Questions</div>
+    <div class="instructions">Answer each question based on your knowledge of SDA denominational media history, media ethics, OKR strategic planning, and Adventist theological principles in media ministry.</div>
+    <label class="name-label" for="student-name">Your full name</label>
+    <input type="text" id="student-name" class="name-input" placeholder="e.g. Dr. James Okafor" autocomplete="name">
+  </div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progress" style="width:0%"></div></div>
+
+  <form id="quiz-form" novalidate>
+
+    <div class="card">
+      <div class="theory-tag">SDA Media History</div>
+      <div class="q-num">Question 1 of 5</div>
+      <div class="q-text">Faith for Today, founded by William Fagal in 1950, holds which distinction in American religious broadcasting history?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q1" value="0" required><span>A. It was the first SDA program broadcast internationally via satellite</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="1" ><span>B. It was the first religious television program on network TV in the United States</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="2" ><span>C. It was the first church-produced program to reach one million viewers</span></label></li>
+        <li class="option"><label><input type="radio" name="q1" value="3" ><span>D. It was the first ministry to combine radio and television in a single broadcast strategy</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Media Ethics</div>
+      <div class="q-num">Question 2 of 5</div>
+      <div class="q-text">In the PATH 721 media ethics framework, 'dignity in need-based media' addresses which tension in ministry communication?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q2" value="0" required><span>A. Whether to show images of poverty in fundraising appeals, and when depicting human suffering crosses from awareness into exploiting the vulnerable for institutional gain</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="1" ><span>B. Whether to use professional actors or real congregation members in ministry productions</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="2" ><span>C. How to balance the dignity of ordained clergy with the informal tone of social media</span></label></li>
+        <li class="option"><label><input type="radio" name="q2" value="3" ><span>D. Whether church media should address social justice issues or focus only on evangelism</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">OKRs — Strategic Planning</div>
+      <div class="q-num">Question 3 of 5</div>
+      <div class="q-text">In the OKR (Objectives and Key Results) framework introduced on Day 10 of PATH 721, which of the following is a correctly written Key Result for a 90-day church media launch?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q3" value="0" required><span>A. Improve the church's social media presence and community awareness</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="1" ><span>B. Develop a stronger digital ministry that reaches more people</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="2" ><span>C. Broadcast at least 6 live worship services by November 24</span></label></li>
+        <li class="option"><label><input type="radio" name="q3" value="3" ><span>D. Grow our media ministry to be more effective and consistent</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Sabbath & Sustainability</div>
+      <div class="q-num">Question 4 of 5</div>
+      <div class="q-text">The PATH 721 principle that 'the Sabbath is a media fast: rest is resistance to media saturation' draws on which theological conviction specific to Seventh-day Adventist identity?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q4" value="0" required><span>A. The belief that media technology is inherently spiritually dangerous</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="1" ><span>B. The fourth commandment Sabbath rest as a weekly, embodied counter-witness to an always-on digital culture</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="2" ><span>C. The SDA health message requiring limitation of screen time for physical wellness</span></label></li>
+        <li class="option"><label><input type="radio" name="q4" value="3" ><span>D. The prophetic tradition of withdrawing from culture to preserve doctrinal purity</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="theory-tag">Voice of Prophecy</div>
+      <div class="q-num">Question 5 of 5</div>
+      <div class="q-text">The Voice of Prophecy, founded by H.M.S. Richards Sr. in 1929, is significant to PATH 721 students primarily because it demonstrates which media ministry principle?</div>
+      <ul class="options">
+        <li class="option"><label><input type="radio" name="q5" value="0" required><span>A. Television is always more effective than radio for evangelistic outreach</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="1" ><span>B. A media ministry built on one platform will inevitably decline as technology changes</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="2" ><span>C. A theologically grounded media ministry can sustain multi-platform relevance across nearly a century by adapting its delivery without compromising its message</span></label></li>
+        <li class="option"><label><input type="radio" name="q5" value="3" ><span>D. Denominational media ministries are always more effective than local church media</span></label></li>
+      </ul>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submit-btn">Submit Quiz</button>
+    <div class="saving-notice" id="saving-notice"></div>
+  </form>
+</div>
+
+<div id="result-view" style="display:none"></div>
+
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyuRDzebox8nE1gkGySdyzG24HuzGHZCqi2zKBlvDrpPl-H6-1GjN8NQ166qgZrgrvlTg/exec';
+const CORRECT = { q1:1, q2:0, q3:2, q4:1, q5:2 };
+const THEORIES = { q1:'SDA Media History', q2:'Media Ethics', q3:'OKRs — Strategic Planning', q4:'Sabbath & Sustainability', q5:'Voice of Prophecy' };
+const QUESTIONS = { q1:'Faith for Today — Founded 1950, William Fagal', q2:'Media Ethics — Dignity in Need-Based Media, Day 9, PATH 721', q3:'OKRs — Objectives and Key Results, Day 10, PATH 721', q4:'Sabbath & Media Ministry Sustainability — Day 9, PATH 721', q5:'Voice of Prophecy — Founded 1929, H.M.S. Richards Sr.' };
+const EXPLANATIONS = { q1:'Faith for Today, launched in 1950 by William Fagal, was the first religious television program broadcast on network television in the United States — a pioneering achievement that established the model for SDA broadcast evangelism decades before cable and streaming existed. It demonstrated that the church could reach mass audiences through the dominant media platform of the era.', q2:'Ministry organizations sometimes use images of suffering, poverty, or crisis to motivate giving or support — a practice that can slide from legitimate awareness into exploiting vulnerable people for institutional benefit. The ethical question is: are we showing human need with the dignity it deserves, with consent, and in a way that honors the Imago Dei in every person depicted?', q3:"A Key Result must be specific and measurable — it must answer definitively whether the objective was achieved. 'Broadcast at least 6 live worship services by November 24' is measurable: you either did it or you did not. The other options are aspirational statements, not Key Results. OKR discipline requires that vague language like 'improve,' 'strengthen,' or 'grow' be replaced with concrete numbers and deadlines.", q4:'For Seventh-day Adventists, the Sabbath is not simply a personal preference but a fourth-commandment conviction — a weekly ceasing from work and media as a counter-cultural act of trust in God. In an always-on digital media environment, Sabbath observance becomes a prophetic witness: the pastor and media team who rest weekly model something the surrounding culture has largely forgotten how to do.', q5:'The Voice of Prophecy began as a radio broadcast in 1929, expanded to Bible correspondence courses, and has since embraced podcasting and digital platforms — maintaining ministry effectiveness across nearly a century of technological change. It demonstrates that media longevity comes not from loyalty to a platform but from theological clarity about the mission. The medium changes; the message does not.' };
+
+document.querySelectorAll('input[type=radio]').forEach(r => {
+  r.addEventListener('change', () => {
+    const answered = Object.keys(CORRECT).filter(q => document.querySelector('input[name="'+q+'"]:checked')).length;
+    document.getElementById('progress').style.width = (answered / 5 * 100) + '%';
+  });
+});
+
+document.getElementById('quiz-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name = document.getElementById('student-name').value.trim();
+  if (!name) { alert('Please enter your full name before submitting.'); document.getElementById('student-name').focus(); return; }
+  const btn = document.getElementById('submit-btn');
+  const notice = document.getElementById('saving-notice');
+  btn.disabled = true; btn.textContent = 'Submitting...';
+  notice.textContent = 'Saving your result...';
+  let correct = 0;
+  const answers = {};
+  for (const q in CORRECT) {
+    const sel = document.querySelector('input[name="'+q+'"]:checked');
+    const chosen = sel ? parseInt(sel.value) : -1;
+    const isCorrect = chosen === CORRECT[q];
+    if (isCorrect) correct++;
+    answers[q] = { chosen, isCorrect };
+  }
+  const pct = Math.round(correct / 5 * 100);
+  const record = { name, score: pct, correct, total: 5 };
+  try {
+    await fetch(SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(record) });
+    notice.textContent = 'Result saved to instructor sheet.';
+  } catch(err) {
+    notice.textContent = 'Note: result could not be saved — check your connection.';
+  }
+  document.getElementById('quiz-view').style.display = 'none';
+  const rv = document.getElementById('result-view');
+  rv.style.display = 'block';
+  let breakdown = '';
+  for (const q in CORRECT) {
+    const a = answers[q];
+    const opts = document.querySelectorAll('input[name="'+q+'"]');
+    const correctText = opts[CORRECT[q]].parentElement.querySelector('span').textContent;
+    breakdown += '<div class="breakdown-item">'
+      + '<div class="b-theory">' + THEORIES[q] + '</div>'
+      + '<div class="b-q">' + QUESTIONS[q] + '</div>'
+      + '<div class="b-status">' + (a.isCorrect ? '<span class="b-correct-lbl">Correct</span>' : '<span class="b-wrong-lbl">Incorrect</span>') + '</div>'
+      + (!a.isCorrect ? '<div class="b-answer"><strong>Correct answer:</strong> ' + correctText + '</div>' : '')
+      + '<div class="b-explanation">' + EXPLANATIONS[q] + '</div>'
+      + '</div>';
+  }
+  rv.innerHTML = '<div class="card"><div class="result-header">'
+    + '<div style="font-size:14px;color:#888">' + name + '</div>'
+    + '<div class="score-big ' + (pct >= 70 ? 'pass' : 'fail') + '">' + pct + '%</div>'
+    + '<div style="font-size:14px;color:#666">' + correct + ' of 5 correct</div>'
+    + '<span class="result-badge ' + (pct >= 70 ? 'badge-pass' : 'badge-fail') + '">' + (pct >= 70 ? 'Passed' : 'Needs further review') + '</span>'
+    + '</div></div>'
+    + '<div class="card"><div class="breakdown-title">Answer breakdown</div>' + breakdown + '</div>';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
